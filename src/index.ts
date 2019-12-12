@@ -9,10 +9,14 @@ import { mapleRequest } from './.internal/packages/mapleRequest';
 import deepClone from './.internal/tools/deepClone';
 import formatDate from './.internal/tools/formatDate';
 import queryString from './.internal/tools/queryString';
+import toChineseAmount from './.internal/tools/toChineseAmount';
+import toDiscontinuousMobile from './.internal/tools/toDiscontinuousMobile';
 
 export {
     mapleRequest,
     deepClone,
     formatDate,
-    queryString
+    queryString,
+    toChineseAmount,
+    toDiscontinuousMobile,
 }
