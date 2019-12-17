@@ -3,6 +3,7 @@
   "version": "1.1.16",
   "description": "",
   "main": "dist/by-tools.js",
+  "types": "./types/main.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/by-ui/by-tools.git"
