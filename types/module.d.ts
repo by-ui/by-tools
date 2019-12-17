@@ -1,3 +1,6 @@
+/**
+ * 日期相关
+ */
 export namespace date {
 
     /**
@@ -15,7 +18,10 @@ export namespace date {
 
 }
 
-export namespace phoneFormat {
+/**
+ * 手机号相关
+ */
+export namespace phone {
 
     /**
      * 转为间断的手机号
@@ -28,5 +34,19 @@ export namespace phoneFormat {
      * @param mobile 手机号
      * @param mark 加密符号 非必传 默认*
      */
-    export function toEncryptMobule(mobile: string, mark?: string): string
+    export function toEncryptMobule(mobile: string, mark?: string): string;
+
+}
+
+/**
+ * 货币相关
+ */
+export namespace money {
+
+    /**
+     * 数字转中文大写
+     * @param number 阿拉伯数字的钱
+     */
+    export function toChineseAmount(number: number): string;
+    
 }

@@ -1,3 +1,9 @@
+/*
+ * @Author: xiaokangzheng 
+ * @Date: 2019-12-17 13:23:23 
+ * @Last Modified by: xiaokangzheng 
+ * @Last Modified time: 2019-12-17 13:23:23 
+ */
 class money {
 
     static toChineseAmount = function (number: number) {
