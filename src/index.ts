@@ -6,6 +6,7 @@
 import { mapleRequest } from './.internal/packages/mapleRequest';
 
 /************** tools **************/
+import date from './.internal/tools/date';
 import deepClone from './.internal/tools/deepClone';
 import formatDate from './.internal/tools/formatDate';
 import queryString from './.internal/tools/queryString';
@@ -14,6 +15,7 @@ import toDiscontinuousMobile from './.internal/tools/toDiscontinuousMobile';
 
 export {
     mapleRequest,
+    date,
     deepClone,
     formatDate,
     queryString,
