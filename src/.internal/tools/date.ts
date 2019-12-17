@@ -1,11 +1,6 @@
 
 class date {
-
-    /**
-     * 格式化日期
-     * @param {*} datetime 时间
-     * @param {*} format 格式化
-     */
+    
     static formDate(datetime: string | Date, format: string = 'YYYY-MM-DD HH:mm:ss') {
         if (typeof (datetime) == "string") {
             datetime = datetime.replace("年", "/").replace("月", "/").replace("日", "")
@@ -43,10 +38,6 @@ class date {
         return format;
     }
 
-    /**
-     * 获取当前这一周的日期
-     * 返回 xxxx-xx-xx ~ xxxx-xx-xx
-     */
     static getCurrentWeekDays() {
         const now: any = new Date()
         const weekFirstDay: any = new Date(now - (now.getDay() - 1) * 86400000)
@@ -57,7 +48,6 @@ class date {
 
         return currentWeek;
     }
-    
 }
 
 export default date;
