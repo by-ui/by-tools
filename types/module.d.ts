@@ -1,4 +1,35 @@
 /**
+ * 函数相关
+ */
+export namespace byfunction {
+    
+    /**
+     * 防抖函数
+     * @param func 需要执行的方法
+     * @param wait 定时器时间（毫秒）
+     */
+    export function debounce(func: Function, wait: number);
+
+    /**
+     * 节流函数
+     * @param func 需要执行的方法
+     * @param delay 延迟时间（毫秒）
+     */
+    export function throttle(func: Function, delay: number);
+}
+/**
+ * 数据相关
+ */
+export namespace data {
+    
+    /**
+     * 深层拷贝
+     * @param obj 需要转换的对象或数组
+     */
+    export function deepClone(obj: T): <T>;
+}
+
+/**
  * 日期相关
  */
 export namespace date {
@@ -48,5 +79,5 @@ export namespace money {
      * @param number 阿拉伯数字的钱
      */
     export function toChineseAmount(number: number): string;
-    
+
 }

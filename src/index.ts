@@ -13,6 +13,8 @@ import toChineseAmount from './.internal/tools/toChineseAmount';
 import toDiscontinuousMobile from './.internal/tools/toDiscontinuousMobile';
 
 /************** tools 集合 **************/
+import byfunction from './.internal/tools/byfunction';
+import data from './.internal/tools/data';
 import date from './.internal/tools/date';
 import phone from './.internal/tools/phone';
 import money from './.internal/tools/money';
@@ -25,7 +27,9 @@ export {
     queryString,
     toChineseAmount,
     toDiscontinuousMobile,
-
+    
+    byfunction,
+    data,
     date,
     phone,
     money,
