@@ -26,7 +26,7 @@ export namespace data {
      * 深层拷贝
      * @param obj 需要转换的对象或数组
      */
-    export function deepClone(obj: T): <T>;
+    export function deepClone<T>(obj: T): T;
 }
 
 /**

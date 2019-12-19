@@ -1,6 +1,6 @@
 class data {
 
-    static deepClone<T>(obj: T) {
+    static deepClone<T>(obj: T): T {
         if (obj == null || typeof obj != 'object') return obj;
         else {
             if (obj instanceof Date) {
