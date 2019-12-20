@@ -8,14 +8,14 @@ export namespace byfunction {
      * @param func 需要执行的方法
      * @param wait 定时器时间（毫秒）
      */
-    export function debounce(func: Function, wait: number);
+    export function debounce(func: Function, wait: number): Function;
 
     /**
      * 节流函数
      * @param func 需要执行的方法
      * @param delay 延迟时间（毫秒）
      */
-    export function throttle(func: Function, delay: number);
+    export function throttle(func: Function, delay: number): Function;
 }
 /**
  * 数据相关
