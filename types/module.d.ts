@@ -7,8 +7,9 @@ export namespace byfunction {
      * 防抖函数
      * @param func 需要执行的方法
      * @param wait 定时器时间（毫秒）
+     * @param immediate 是否立即执行, 默认 false
      */
-    export function debounce(func: Function, wait: number): Function;
+    export function debounce(func: Function, wait: number, immediate?: boolean): Function;
 
     /**
      * 节流函数
