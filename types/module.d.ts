@@ -2,7 +2,7 @@
  * 函数相关
  */
 export namespace byfunction {
-    
+
     /**
      * 防抖函数
      * @param func 需要执行的方法
@@ -22,7 +22,7 @@ export namespace byfunction {
  * 数据相关
  */
 export namespace data {
-    
+
     /**
      * 深层拷贝
      * @param obj 需要转换的对象或数组
@@ -81,4 +81,16 @@ export namespace money {
      */
     export function toChineseAmount(number: number): string;
 
+}
+
+/**
+ * 字符串相关
+ */
+export namespace string {
+
+    /**
+     * 获取浏览器GET参数
+     * @param name 
+     */
+    export function getQueryString(name: string): string;
 }
