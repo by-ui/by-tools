@@ -1,6 +1,6 @@
 {
   "name": "by-tools",
-  "version": "1.1.22",
+  "version": "1.1.23",
   "description": "",
   "main": "dist/by-tools.js",
   "types": "./types/module.d.ts",
