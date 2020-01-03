@@ -86,7 +86,7 @@ export namespace money {
 /**
  * 字符串相关
  */
-export namespace string {
+export namespace bystring {
 
     /**
      * 获取浏览器GET参数
