@@ -45,8 +45,16 @@ export namespace date {
     /**
      * 获取当前这一周的日期
      * 返回 xxxx-xx-xx ~ xxxx-xx-xx
+     * @param format 是否需要格式化为数组 非必传 默认false
      */
-    export function getCurrentWeekDays(): string;
+    export function getCurrentWeekDays(format?: boolean): string;
+
+    /**
+     * 根据日期获取日期范围
+     * @param stime 开始日期 xxxx-xx-xx
+     * @param etime 开始日期 xxxx-xx-xx
+     */
+    export function getDateRange(stime: string, etime: string): any[];
 
 }
 
