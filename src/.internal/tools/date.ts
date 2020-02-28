@@ -6,7 +6,7 @@
  */
 
 class date {
-    
+
     static formDate(datetime: string | Date, format: string = 'YYYY-MM-DD HH:mm:ss') {
         if (typeof (datetime) == "string") {
             datetime = datetime.replace("年", "/").replace("月", "/").replace("日", "")
@@ -44,15 +44,45 @@ class date {
         return format;
     }
 
-    static getCurrentWeekDays() {
+    static getCurrentWeekDays(format = false) {
         const now: any = new Date()
         const weekFirstDay: any = new Date(now - (now.getDay() - 1) * 86400000)
         const firstMonth = Number(weekFirstDay.getMonth()) + 1
         const weekLastDay = new Date((weekFirstDay / 1000 + 6 * 86400) * 1000)
         const lastMonth = Number(weekLastDay.getMonth()) + 1
-        const currentWeek = weekFirstDay.getFullYear() + '-' + firstMonth + '-' + weekFirstDay.getDate() + '~' + weekLastDay.getFullYear() + '-' + lastMonth + '-' + weekLastDay.getDate()
 
-        return currentWeek;
+        const start = weekFirstDay.getFullYear() + '-' + firstMonth + '-' + weekFirstDay.getDate();
+        const end = weekLastDay.getFullYear() + '-' + lastMonth + '-' + weekLastDay.getDate();
+
+        const currentWeek = start + '~' + end
+
+        return format ? currentWeek : this.getDateRange(start, end);
+    }
+
+    static getDateRange(stime: string, etime: string) {
+        //初始化日期列表，数组
+        let diffdate = new Array();
+        let i = 0;
+        //开始日期小于等于结束日期,并循环
+        while (stime <= etime) {
+            diffdate[i] = stime;
+
+            //获取开始日期时间戳
+            let stime_ts = new Date(stime).getTime();
+
+            //增加一天时间戳后的日期
+            let next_date = stime_ts + (24 * 60 * 60 * 1000);
+
+            //拼接年月日，这里的月份会返回（0-11），所以要+1
+            let next_dates_y = new Date(next_date).getFullYear() + '-';
+            let next_dates_m = (new Date(next_date).getMonth() + 1 < 10) ? '0' + (new Date(next_date).getMonth() + 1) + '-' : (new Date(next_date).getMonth() + 1) + '-';
+            let next_dates_d = (new Date(next_date).getDate() < 10) ? '0' + new Date(next_date).getDate() : new Date(next_date).getDate();
+
+            stime = next_dates_y + next_dates_m + next_dates_d;
+
+            //增加数组key
+            i++;
+        }
     }
 }
 
