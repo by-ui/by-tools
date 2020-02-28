@@ -56,10 +56,14 @@ class date {
 
         const currentWeek = start + '~' + end
 
-        return param.format ? currentWeek : this.getDateRange(start, end);
+        return !param.format ? currentWeek : this.getDateRange(start, end);
     }
 
     static getDateRange(stime: string, etime: string) {
+        
+        stime = this.formDate(stime, 'YYYY-MM-DD');
+        etime = this.formDate(etime, 'YYYY-MM-DD');
+
         //初始化日期列表，数组
         let diffdate = new Array();
         let i = 0;
