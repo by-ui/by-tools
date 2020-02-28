@@ -44,7 +44,7 @@ class date {
         return format;
     }
 
-    static getCurrentWeekDays(format = false) {
+    static getCurrentWeekDays(param = { format: false }) {
         const now: any = new Date()
         const weekFirstDay: any = new Date(now - (now.getDay() - 1) * 86400000)
         const firstMonth = Number(weekFirstDay.getMonth()) + 1
@@ -56,7 +56,7 @@ class date {
 
         const currentWeek = start + '~' + end
 
-        return format ? currentWeek : this.getDateRange(start, end);
+        return param.format ? currentWeek : this.getDateRange(start, end);
     }
 
     static getDateRange(stime: string, etime: string) {
@@ -83,6 +83,8 @@ class date {
             //增加数组key
             i++;
         }
+
+        return diffdate;
     }
 }
 
