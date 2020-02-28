@@ -47,7 +47,7 @@ export namespace date {
      * 返回 xxxx-xx-xx ~ xxxx-xx-xx
      * @param format 是否需要格式化为数组 非必传 默认false
      */
-    export function getCurrentWeekDays(format?: boolean): string;
+    export function getCurrentWeekDays(param?: any): string | any[];
 
     /**
      * 根据日期获取日期范围
