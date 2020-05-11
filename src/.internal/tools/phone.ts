@@ -17,6 +17,16 @@ class phoneFormat {
     static toEncryptMobule(mobile: string, mark: string = '*') {
         return mobile.replace(/^(\d{3})\d{4}(\d*)$/, `$1${mark}${mark}${mark}${mark}$2`);
     }
+    
+    static has(mobile: string) {
+        if (!mobile) {
+            return false;
+        } else if (!/^[1][3-9][0-9]{9}$/.test(mobile)) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
 
 export default phoneFormat;
