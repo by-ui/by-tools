@@ -117,7 +117,7 @@ const MapleRequestPlugin: PluginObject<MapleRequestConfig> = {
                             loadingStamp = `loading-${randomInt(10)}`;
 
                             if (!loadingQuery.length) {
-                                options && options.loading && options.loading.start.apply(this);
+                                options && options.loading && options.loading.start.apply(this, [loading]);
                             }
 
                             loadingQuery.push(loadingStamp);
