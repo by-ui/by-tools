@@ -46,4 +46,4 @@ const MapleRequest: PluginObject<MapleRequestConfig> = {
 
 const mapleRequest = { api, MapleRequestConfig, MapleRequest };
 
-export { mapleRequest };
+export { mapleRequest, api, MapleRequestApis };
